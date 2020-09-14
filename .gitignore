@@ -1,0 +1,8 @@
+/data/*
+!/data/.keep
+/files/*
+!/files/.keep
+/volumes/db/*
+/volumes/logs/*
+/volumes/private/*
+/volumes/public/*
