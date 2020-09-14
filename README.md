@@ -34,6 +34,14 @@ Desmarque `"Criar nova base de dados"`
 
 Desmarque `"Fornece um ID único ao site e a URL OAI exclusivamente para estatísticas do PKP e alertas de segurança."`
 
+## Configuração permanente
+
+Ao clicar em `Instalar o sistema`, uma tela aparecerá informando que o arquivo `config.inc.php` não pode ser alterado. Isto é esperado.
+
+Copie o código de configuração exibido abaixo da mensagem, crie um novo arquivo em `volumes/config/ojs.config.inc.php` e cole a configuração. ATENÇÃO! O nome do novo arquivo deve ser `ojs.config.inc.php`.
+
+Não realizar esta etapa fará com que seja necessário reinstalar o sistema sempre que o comando `docker-compose up` for executado.
+
 # Desenvolvimento do Tema
 Os arquivos do tema devem ficar dentro da pasta `src`, que será montada na instalação do OJS.
 Na configuração da revista, habilite o pluguin do tema.

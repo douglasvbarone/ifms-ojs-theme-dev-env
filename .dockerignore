@@ -1,8 +1,0 @@
-.git/
-.gitignore
-data/
-files/
-docker-compose.yml
-Dockerfile
-Dockerfile.ojs
-Dockerfile.ocs

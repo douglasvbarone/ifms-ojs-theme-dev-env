@@ -1,9 +1,3 @@
-# File: docker-compose.yml
-# Access via "http://localhost:8081"
-#
-# Call example:
-# $ docker-compose up
-
 version: "3.6"
 
 networks:
@@ -40,13 +34,7 @@ services:
     ports:
       - "${HTTP_PORT:-8080}:80"
       - "${HTTPS_PORT:-443}:443"
-    environment: 
-      OJS_CLI_INSTALL: 1
-      OJS_DB_HOST: db
-      OJS_DB_USER: "${MYSQL_USER:-ojs}"
-      OJS_DB_PASSWORD: "${MYSQL_PASSWORD:-ojs}"
-      OJS_DB_NAME: "${MYSQL_DATABASE:-ojs}"
-      
+          
     volumes:
       - ./src/:/var/www/html/plugins/themes/ifms/
 #      - /etc/localtime:/etc/localtime
