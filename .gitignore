@@ -6,3 +6,4 @@
 /volumes/logs/*
 /volumes/private/*
 /volumes/public/*
+/volumes/config/*
