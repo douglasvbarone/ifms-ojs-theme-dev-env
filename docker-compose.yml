@@ -9,7 +9,7 @@ services:
     image: mariadb:10.2
 #    env_file:
 #      - .env
-    container_name: "ojs_db_${COMPOSE_PROJECT_NAME:-demo}"
+    container_name: "ojs_db_${COMPOSE_PROJECT_NAME:-theme_dev}"
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:-ojs}"
       MYSQL_DATABASE: "${MYSQL_DATABASE:-ojs}"
@@ -28,7 +28,7 @@ services:
     image: pkpofficial/ojs:3_2_1-1
 #    env_file:
 #      - .env
-    container_name: "ojs_app_${COMPOSE_PROJECT_NAME:-demo}"
+    container_name: "ojs_app_${COMPOSE_PROJECT_NAME:-theme_dev}"
     hostname: "${COMPOSE_PROJECT_NAME:-demo}"
     restart: "no"
     ports:
@@ -36,12 +36,12 @@ services:
       - "${HTTPS_PORT:-443}:443"
           
     volumes:
-      - ./src/:/var/www/html/plugins/themes/ifms/
-#      - /etc/localtime:/etc/localtime
-      - ./volumes/private:/srv/files
-#      - ./volumes/public:/var/www/html/public
-      - ./volumes/logs/app:/var/log/apache2
       - ./volumes/config/ojs.config.inc.php:/var/www/html/config.inc.php
+      - ./src/:/var/www/html/plugins/themes/ifms/
+      - ./volumes/private:/srv/files
+      - ./volumes/logs/app:/var/log/apache2
+#      - ./volumes/public:/var/www/html/public      
+#      - /etc/localtime:/etc/localtime
 #      - ./volumes/config/apache.htaccess:/var/www/html/.htaccess
 #      - ./volumes/config/php.custom.ini:/usr/local/etc/php/conf.d/custom.ini
 

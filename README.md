@@ -11,10 +11,11 @@ Em seu terminal:
 ~~~
 docker-compose up
 ~~~
+Ou `docker-compose up -d` para liberar o terminal.
 
 Acesse: http://localhost:8080
 
-Siga as instuções de instalação para o usuário. 
+Siga as instuções de instalação para o usuário.
 
 ## Banco de dados
 
@@ -46,3 +47,5 @@ Não realizar esta etapa fará com que seja necessário reinstalar o sistema sem
 Os arquivos do tema devem ficar dentro da pasta `src`, que será montada na instalação do OJS.
 Na configuração da revista, habilite o pluguin do tema.
 
+### Atenção
+**Este ambiente não deve ser usado em produção.**
